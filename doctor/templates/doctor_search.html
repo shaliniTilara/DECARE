@@ -1,0 +1,158 @@
+ <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=BenchNine:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  <style>
+    body {
+      background-color: #6495ED;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 90%;
+      background-color: #87ceeb;
+      padding: 40px;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      
+    }
+    
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 4rem;
+      color: black; 
+      margin-bottom: 30px;
+    }
+
+    
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 2px black;
+    }
+
+    .table th,
+    table td {
+      border: 2px skyblue;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .table th {
+      background-color: #1E90FF;
+      color: white;
+    }
+    .table.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black; /* ⬅️ BLACK OUTLINE */
+  }
+
+
+ .btn-success,
+  .btn-warning {
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    text-decoration: none !important; /* ⬅️ REMOVE UNDERLINE */
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .btn-warning {
+    background-color: #ffc107;
+    color: white;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+    text-decoration: none;
+  }
+
+  .btn-warning:hover {
+    background-color: #e0a800;
+    text-decoration: none;
+  }
+
+  a.btn {
+    text-decoration: none !important;
+  }
+
+
+
+    .btn-back {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn-back:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="about text-center">
+    <div class="container">
+      <h2>DOCTORS</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Specialty</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th> </th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for doctor in doctors %}
+            <tr>
+              <td>{{ doctor.name }}</td>
+              <td>{{ doctor.specialization }}</td>
+              <td>{{ doctor.email }}</td>
+              <td>{{ doctor.phone }}</td>
+              <td>{{ doctor.gender }}</td>
+              <td>
+                <a href="{% url 'doctor_edit' doctor.id %}" class="btn btn-success ">Edit</a>
+              </td>
+              <td>
+                <a href="{% url 'delete_doctor' doctor.id %}" class="btn btn-warning">Delete</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        
+        <a href="{% url 'index' %}#admin" class="btn-back mt-4">Back to Admin Panel</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

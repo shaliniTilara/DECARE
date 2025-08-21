@@ -1,0 +1,661 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DOCTOR - Responsive HTML &amp; Bootstrap Template</title>
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=BenchNine:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="/static/js/modernizr.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    select {
+      width: 100%;
+      height: 40px;
+      background: #fff;
+      font-size: 13px;
+      color: #084a5c;
+      font-family: "Open Sans", sans-serif;
+      padding: 12px;
+      border: 0;
+      margin-bottom: 12px;
+    }
+    .header-backup {
+      width: 20px;
+      height: 119px;
+      background: transparent;
+      margin: auto;
+    }
+    .card {
+ 
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background-color: blue;
+  color: white;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card-body h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+  </style>
+  <body>
+    <!-- ====================================================
+	header section -->
+    <header class="top-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 header-logo">
+            <br />
+            <a href="index.html"
+              ><img
+                src="/static/img/logo.png"
+                alt=""
+                class="img-responsive logo"
+            /></a>
+          </div>
+
+          <div class="col-md-8">
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <!-- Navbar header -->
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a class="menu active" href="#home">Home</a></li>
+                    <li><a class="menu" href="#about">About Us</a></li>
+                    <li><a class="menu" href="#service">Our Services</a></li>
+                    <li><a class="menu" href="#team">Our Team</a></li>
+                    <li><a class="menu" href="#contact">Registration</a></li>
+                    <li><a class="menu" href="#admin">Admin </a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end of header area -->
+
+    <section class="slider" id="home">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            id="carouselHacked"
+            class="carousel slide carousel-fade"
+            data-ride="carousel"
+          >
+            <div class="header-backup"></div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="/static/img/slide-one.jpg" alt="" />
+                <div class="carousel-caption">
+                  <h1>providing</h1>
+                  <p>highquality service for men &amp; women</p>
+                  <button>learn more</button>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/static/img/slide-two.jpg" alt="" />
+                <div class="carousel-caption">
+                  <h1>providing</h1>
+                  <p>highquality service for men &amp; women</p>
+                  <button>learn more</button>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/static/img/slide-three.jpg" alt="" />
+                <div class="carousel-caption">
+                  <h1>providing</h1>
+                  <p>highquality service for men &amp; women</p>
+                  <button>learn more</button>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/static/img/slide-four.jpg" alt="" />
+                <div class="carousel-caption">
+                  <h1>providing</h1>
+                  <p>highquality service for men &amp; women</p>
+                  <button>learn more</button>
+                </div>
+              </div>
+            </div>
+            <!-- Controls -->
+            <a
+              class="left carousel-control"
+              href="#carouselHacked"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#carouselHacked"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of slider section -->
+
+    <!-- about section -->
+    <section class="about text-center" id="about">
+      <div class="container">
+        <div class="row">
+          <h2>about us</h2>
+          <h4>
+              We are dedicated to simplifying hospital and clinic operations by providing an intuitive platform to manage doctor profiles. Our goal is to help healthcare administrators efficiently register, track, and search for doctors based on their specialization—ensuring the right care is always just a few clicks away.
+          </h4>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-about-detail clearfix">
+              <div class="about-img">
+                <img
+                  class="img-responsive"
+                  src="/static/img/item1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="about-details">
+                <div class="pentagon-text">
+                  <h1>C</h1>
+                </div>
+                <h3>Pediatrician</h3>
+                <p>
+                  We are dedicated to simplifying hospital and clinic operations by providing an intuitive platform to manage doctor profiles. Our goal is to help healthcare administrators efficiently register, track, and search for doctors based on their specialization—ensuring the right care is always just a few clicks away.
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-about-detail">
+              <div class="about-img">
+                <img
+                  class="img-responsive"
+                  src="/static/img/item2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="about-details">
+                <div class="pentagon-text">
+                  <h1>W</h1>
+                </div>
+
+                <h3>Cardiologist</h3>
+                <p>
+                 We are dedicated to simplifying hospital and clinic operations by providing an intuitive platform to manage doctor profiles. Our goal is to help healthcare administrators efficiently register, track, and search for doctors based on their specialization—ensuring the right care is always just a few clicks away.
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="single-about-detail">
+              <div class="about-img">
+                <img
+                  class="img-responsive"
+                  src="/static/img/item3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="about-details">
+                <div class="pentagon-text">
+                  <h1>M</h1>
+                </div>
+                <h3>Dermatologist</h3>
+                <p>
+                  We are dedicated to simplifying hospital and clinic operations by providing an intuitive platform to manage doctor profiles. Our goal is to help healthcare administrators efficiently register, track, and search for doctors based on their specialization—ensuring the right care is always just a few clicks away.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about section -->
+
+    <!-- service section starts here -->
+    <section class="service text-center" id="service">
+      <div class="container">
+        <div class="row">
+          <h2>our services</h2>
+          <h4>
+            Empowering healthcare administrators with the tools they need to manage doctor profiles, streamline assignments, and enhance patient referrals through smart filtering.
+          </h4>
+          <div class="col-md-3 col-sm-6">
+            <div class="single-service">
+              <div class="single-service-img">
+                <div class="service-img">
+                  <img
+                    class="heart img-responsive"
+                    src="/static/img/service1.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <h3>Heart problem</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="single-service">
+              <div class="single-service-img">
+                <div class="service-img">
+                  <img
+                    class="brain img-responsive"
+                    src="/static/img/service2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <h3>brain problem</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="single-service">
+              <div class="single-service-img">
+                <div class="service-img">
+                  <img
+                    class="knee img-responsive"
+                    src="/static/img/service3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <h3>knee problem</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="single-service">
+              <div class="single-service-img">
+                <div class="service-img">
+                  <img
+                    class="bone img-responsive"
+                    src="/static/img/service4.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <h3>human bones problem</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of service section -->
+
+    <!-- team section -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="team-heading text-center">
+            <h2>our team</h2>
+            <h4>
+Behind every great healthcare solution is a team of dedicated developers, designers, and medical advisors working together to ensure doctors are connected efficiently and patients get timely care.            </h4>
+          </div>
+          <div class="col-md-2 single-member col-sm-4">
+            <div class="person">
+              <img
+                class="img-responsive"
+                src="/static/img/member1.jpg"
+                alt="member-1"
+              />
+            </div>
+            <div class="person-detail">
+              <div class="arrow-bottom"></div>
+              <h3>Dr. M. Weiner, M.D.</h3>
+              <p>
+                Cardiologist | Harvard Medical School "Expert in heart disease
+                and minimally invasive cardiac surgery. 12+ years of hospital
+                and clinical experience."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2 single-member col-sm-4">
+            <div class="person-detail">
+              <div class="arrow-top"></div>
+              <h3>Dr. Danielle, M.D.</h3>
+              <p>
+                Pediatrician | Johns Hopkins University "Specialist in child
+                growth and immunizations. Works with children's hospitals
+                nationwide."
+              </p>
+            </div>
+            <div class="person">
+              <img
+                class="img-responsive"
+                src="/static/img/member2.jpg"
+                alt="member-2"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 single-member col-sm-4">
+            <div class="person">
+              <img
+                class="img-responsive"
+                src="/static/img/member3.jpg"
+                alt="member-3"
+              />
+            </div>
+            <div class="person-detail">
+              <div class="arrow-bottom"></div>
+              <h3>Dr. Caitlin, M.D.</h3>
+              <p>
+                Dermatologist | AIIMS Delhi "Skin care expert with 10 years in
+                cosmetic and medical dermatology."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2 single-member col-sm-4">
+            <div class="person-detail">
+              <div class="arrow-top"></div>
+              <h3>Dr. Joseph, M.D.</h3>
+              <p>
+                Oncologist | Stanford University "Focuses on early cancer
+                detection and chemotherapy innovations. Published author in
+                oncology journals."
+              </p>
+            </div>
+            <div class="person">
+              <img
+                class="img-responsive"
+                src="/static/img/member4.jpg"
+                alt="member-4"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 single-member col-sm-4">
+            <div class="person">
+              <img
+                class="img-responsive"
+                src="/static/img/member5.jpg"
+                alt="member-5"
+              />
+            </div>
+            <div class="person-detail">
+              <div class="arrow-bottom"></div>
+              <h3>Dr. Michael, M.D.</h3>
+              <p>
+                Psychiatrist | Oxford University "Specializes in adolescent and
+                trauma psychiatry. Involved in community mental health
+                outreach."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2 single-member col-sm-4">
+            <div class="person-detail">
+              <div class="arrow-top"></div>
+              <h3>Dr. Hasina, M.D.</h3>
+              <p>
+                Orthopedic Surgeon | Mayo Clinic "Experienced in joint
+                replacement and sports injury recovery. Consultant for multiple
+                athletic teams."
+              </p>
+            </div>
+            <div class="person">
+              <img
+                class="img-responsive"
+                src="/static/img/member6.jpg"
+                alt="member-5"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of team section -->
+
+    <!-- map section -->
+    <div class="api-map" id="contact">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 map" id="map"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end of map section -->
+
+    <!-- contact section starts here -->
+    <section class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-caption clearfix">
+            <div class="contact-heading text-center">
+              <h2>contact us</h2>
+            </div>
+            <div class="col-md-5 contact-info text-left">
+              <h3>contact information</h3>
+              <div class="info-detail">
+                <ul>
+                  <li>
+                    <i class="fa fa-calendar"></i
+                    ><span>Monday - Friday:</span> 9:30 AM to 6:30 PM
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <i class="fa fa-map-marker"></i><span>Address:</span> 123
+                    Some Street , London, UK, CP 123
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <i class="fa fa-phone"></i><span>Phone:</span> (032)
+                    987-1235
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <i class="fa fa-fax"></i><span>Fax:</span> (123) 984-1234
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <i class="fa fa-envelope"></i
+                    ><span>Email:</span> info@doctor.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-offset-1 contact-form">
+              <h3>leave us a message</h3>
+
+              <form class="form" method="POST">
+                {% csrf_token %}
+                <input
+                  class="name"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
+                <input
+                  class="adhar_number"
+                  type="text"
+                  name="adharno"
+                  placeholder="adhar-card number"
+                />
+                <input
+                  class="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+                <input
+                  class="phone"
+                  type="text"
+                  name="phone"
+                  placeholder="Phone No:"
+                />
+                <!---disease dropdown-->
+
+                <select name="disease" id="disease" class="form-input">
+                  <option value="">--Select Disease--</option>
+                  <option value="flu">Flu</option>
+                  <option value="covid">COVID-19</option>
+                  <option value="diabetes">Diabetes</option>
+                  <option value="bp">Blood Pressure</option>
+                  <option value="other">Other</option>
+                </select>
+
+                <select name="city" id="city" class="form-input">
+                  <option value="">--Select City--</option>
+                  <option value="delhi">Delhi</option>
+                  <option value="mumbai">Mumbai</option>
+                  <option value="bangalore">Bangalore</option>
+                  <option value="chennai">Chennai</option>
+                  <option value="other">Other</option>
+                      
+                </select>
+
+                <select id="gender" name="gender" class="form-input">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="transgender">others</option>
+                  <!-- New Option -->
+                  <!-- New Option -->
+                </select>
+                <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  class="form-control"
+                  placeholder="Consultancy fee 500 RS/"
+                  readonly
+                />
+                <input class="submit-btn" type="submit" value="SUBMIT" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of contact section -->
+
+    <!---admin section-->
+    <section class="about text-center" id="admin" style="padding: 60px 0;">
+      <div class="container">
+        <h2 style="font-size: 80px; font-weight: bold; margin-bottom: 10px;">Admin Panel</h2>
+        <h4 style="margin-bottom: 40px;">Manage Doctors: Add, View and Search Doctors</h4>
+        
+        <div class="row justify-content-center">
+
+          <!-- Add Doctor -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow">
+              <img class="card-img-top img-fluid" src="{% static 'img/addoc.jpeg' %}" alt="Add Doctor" style="height: 250px; object-fit: cover;">
+              <div class="card-body bg-dark text-white">
+                <div class="pentagon-text"><h1>A</h1></div>
+                <h3 class="card-title">Add Doctor</h3>
+                <p class="card-text">Create a new doctor profile</p>
+                <a href="/doctors/add/" class="btn btn-success">Add</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doctor List -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow">
+              <img class="card-img-top img-fluid" src="{% static 'img/doclist.jpeg' %}" alt="Doctor List" style="height: 250px; object-fit: cover;">
+              <div class="card-body bg-dark text-white">
+                <div class="pentagon-text"><h1>V</h1></div>
+                <h3 class="card-title">Doctor List</h3>
+                <p class="card-text">See all registered doctors</p>
+                <a href="/doctors/" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Doctor -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card shadow">
+              <img class="card-img-top img-fluid" src="{% static 'img/search.jpeg' %}" alt="Search Doctor" style="height: 250px; object-fit: cover;">
+              <div class="card-body bg-dark text-white">
+                <div class="pentagon-text"><h1>S</h1></div>
+                <h3 class="card-title">Search Doctor by Specialization</h3>
+                <form method="POST" action="{% url 'doctor_search' %}">
+                  {% csrf_token %}
+                  <select name="specialty" class="form-control my-2">
+                    <option value="">--Select Specialization--</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                  </select>
+                  <button type="submit" class="btn btn-warning">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- end of admin section -->
+
+    <!-- footer starts here -->
+    <footer class="footer clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 footer-para">
+            <p>&copy;Mostafizur All right reserved</p>
+          </div>
+          <div class="col-xs-6 text-right">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-skype"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- script tags
+	============================================================= -->
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="/static/js/gmaps.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+  </body>
+</html>

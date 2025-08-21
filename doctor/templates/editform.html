@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=BenchNine:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  <style>
+  body {
+    background: #e0f7fa; /* Light sky blue */
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .doctor-form-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #87ceeb; /* Sky blue box */
+    padding: 40px 30px;
+    border-radius: 10px;
+  }
+
+  .form-title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: black;
+    font-family: 'BenchNine', sans-serif;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  button[type="submit"] {
+    background: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .btn-back {
+    margin-left: 20px;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .btn-back:hover {
+    text-decoration: underline;
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="doctor-form-container">
+    <h1 class="form-title">Edit Doctor</h1>
+    <form method="POST" action="">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="name">Doctor Name</label>
+        <input type="text" id="name" name="name" value="{{ doctor.name }}">
+      </div>
+
+      <div class="form-group">
+        <label for="specialty">Specialization</label>
+        <select name="specialty" id="specialty">
+          <option value="">--Select Specialization--</option>
+          <option value="Cardiology" {% if doctor.specialization == "Cardiology" %}selected{% endif %}>Cardiology</option>
+          <option value="Neurology" {% if doctor.specialization == "Neurology" %}selected{% endif %}>Neurology</option>
+          <option value="Dermatology" {% if doctor.specialization == "Dermatology" %}selected{% endif %}>Dermatology</option>
+          <option value="Orthopedics" {% if doctor.specialization == "Orthopedics" %}selected{% endif %}>Orthopedics</option>
+          <option value="Pediatrics" {% if doctor.specialization == "Pediatrics" %}selected{% endif %}>Pediatrics</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email" value="{{ doctor.email }}">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone No.</label>
+        <input type="text" id="phone" name="phone" value="{{ doctor.phone }}">
+      </div><br>
+
+      <div class="form-group text-center">
+        <button type="submit">Update Doctor</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
